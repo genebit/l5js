@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script language="javascript" type="text/javascript">
+        function changeToGreen() {
+            document.getElementById("task1").style.backgroundColor = "green"
+        }
+        function checkAge() {
+            var age = document.checkAgeForm.age.value
+            alert(age > 65)
+        }
+        function add() {
+            var a = parseInt(document.calcForm.num1.value)
+            var b = parseInt(document.calcForm.num2.value)
+            document.getElementById("output").innerHTML = a + b
+        }
+        function subtract() {
+            var a = parseInt(document.calcForm.num1.value)
+            var b = parseInt(document.calcForm.num2.value)
+            document.getElementById("output").innerHTML = a - b
+        }
+        function multiply() {
+            var a = parseInt(document.calcForm.num1.value)
+            var b = parseInt(document.calcForm.num2.value)
+            document.getElementById("output").innerHTML = a * b
+        }
+        function divide() {
+            var a = parseInt(document.calcForm.num1.value)
+            var b = parseInt(document.calcForm.num2.value)
+            document.getElementById("output").innerHTML = a / b
+        }
+    </script>
+</head>
+<body>
+    <section>
+        <h1 id="task1">Task 1</h1>
+        <button onclick="changeToGreen()">Green</button>
+    </section>
+    <hr>
+    <form name="checkAgeForm">
+        <h1>Task 2</h1>
+        <input type="number" name="age">
+        <button onclick="checkAge()">Check</button>
+    </form>
+    <hr>
+    <form name="calcForm">
+        <h1>Task 3</h1>
+        <input type="number" name="num1">
+        <input type="number" name="num2">
+        <button type="button" onclick="add()">Add</button>
+        <button type="button" onclick="subtract()">Subtract</button>
+        <button type="button" onclick="multiply()">Multiply</button>
+        <button type="button" onclick="divide()">Divide</button>
+        <h3>Output:</h3>
+        <p id="output"></p>
+    </form>
+</body>
+</html>
